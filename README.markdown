@@ -2,9 +2,6 @@
 
 A jQuery plugin that detects if one or more elements are overlapping.
 
-
-## Features
-
 The overlaps method exposes two modes of operation. First mode is to filter the selected elements to only those that overlap. The second mode is to compare one set of nodes against another and return true or false if any overlap. In addition to the `.overlaps()` method this plugin exposes a new selector `:overlaps`. 
 
     // filter result set
@@ -19,6 +16,6 @@ The overlaps method exposes two modes of operation. First mode is to filter the 
 
 ## License
 
-The overlaps plugin is dual licensed *(just like jQuery)* under the [MIT](http://www.opensource.org/licenses/mit-license.php) and [GPL](http://www.opensource.org/licenses/gpl-license.php) licenses.
+The overlaps plugin is licensed under the MIT License (LICENSE.txt).
 
-Copyright (c) 2009 [Brandon Aaron](http://brandonaaron.net)
+Copyright (c) 2010 [Brandon Aaron](http://brandonaaron.net)

@@ -1,3 +1,9 @@
+/*! Copyright (c) 2010 Brandon Aaron (http://brandonaaron.net)
+ * Licensed under the MIT License (LICENSE.txt).
+ *
+ * Version 1.0
+ */
+
 (function($) {
 
 $.fn.overlaps = function(selector) {
@@ -62,7 +68,7 @@ function isOverlapping(collection1, collection2) {
 function getDims(elems) {
     var dims = [], i = 0, offset, elem;
     
-    while (elem = elems[i++]) {
+    while ((elem = elems[i++])) {
         offset = $(elem).offset();
         dims.push([
             offset.top,

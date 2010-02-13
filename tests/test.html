@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>overlaps Test Suite</title>
+	<link rel="stylesheet" href="qunit/qunit.css" type="text/css" media="screen">
+	<style type="text/css" media="screen">
+		.testDiv { position: absolute; background: #000; opacity: .5; width: 100px; height: 100px; }
+		#one { top: 50px; left: 50px; }
+		#two { top: 105px; left: 25px; }
+		#three { top: 500px; left: 500px; }
+		#four { top: 0; left: 0; }
+	</style>
+	<script type="text/javascript" src="qunit/qunit.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+	<script src="../jquery.overlaps.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="test.js"></script>
+</head>
+<body>
+	<h1 id="qunit-header">overlaps Test Suite</h1>
+	<h2 id="qunit-banner"></h2>
+	<div id="qunit-testrunner-toolbar"></div>
+	<h2 id="qunit-userAgent"></h2>
+	<ol id="qunit-tests"></ol>
+	<div id="main" style="visibility: hidden;">
+		<div id="one" class="testDiv"></div>
+		<div id="two" class="testDiv"></div>
+		<div id="three" class="testDiv"></div>
+		<div id="four" class="testDiv"></div>
+	</div>
+</body>
+</html>
