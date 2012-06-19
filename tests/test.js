@@ -24,3 +24,12 @@ test(":overlaps/:overlapping", 4, function() {
     ok(!$('#one, #three').is(':overlapping'), '#one does not overlap with #three');
     ok(!$('#two, #four').is(':overlaps'), '#two does not overlap with #four');
 });
+
+test(".overlaps(selector)/adjacent", 4, function() {
+    ok(!$('#adjacent1').overlaps('#adjacent2'), 'no overlap');
+    ok(!$('#adjacent1').overlaps('#adjacent3'), 'no overlap');
+    ok(!$('#adjacent1').overlaps('#adjacent4'), 'no overlap');
+    ok(!$('#adjacent2').overlaps('#adjacent3'), 'no overlap');
+    ok(!$('#adjacent2').overlaps('#adjacent4'), 'no overlap');
+    ok(!$('#adjacent3').overlaps('#adjacent4'), 'no overlap');
+});
