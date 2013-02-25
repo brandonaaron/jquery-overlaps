@@ -28,10 +28,10 @@ function filterOverlaps(collection) {
         index1 = 0,
         index2 = 0,
         length = dims.length;
-    
+
     for (; index1 < length; index1++) {
         for (index2 = 0; index2 < length; index2++) {
-            if (index1 === index2) { 
+            if (index1 === index2) {
                 continue;
             }
             if (checkOverlap(dims[index1], dims[index2])) {
@@ -39,7 +39,7 @@ function filterOverlaps(collection) {
             }
         }
     }
-    
+
     return $.unique(stack);
 }
 
@@ -61,13 +61,13 @@ function isOverlapping(collection1, collection2) {
             }
         }
     }
-    
+
     return false;
 }
 
 function getDims(elems) {
     var dims = [], i = 0, offset, elem;
-    
+
     while ((elem = elems[i++])) {
         offset = $(elem).offset();
         dims.push([
@@ -77,7 +77,7 @@ function getDims(elems) {
             elem.offsetHeight
         ]);
     }
-    
+
     return dims;
 }
 
