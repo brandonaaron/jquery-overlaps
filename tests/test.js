@@ -25,7 +25,7 @@ test(":overlaps/:overlapping", 4, function() {
     ok(!$('#two, #four').is(':overlaps'), '#two does not overlap with #four');
 });
 
-test(".overlaps(selector)/adjacent", 4, function() {
+test(".overlaps(selector)/adjacent", 6, function() {
     ok(!$('#adjacent1').overlaps('#adjacent2'), 'no overlap');
     ok(!$('#adjacent1').overlaps('#adjacent3'), 'no overlap');
     ok(!$('#adjacent1').overlaps('#adjacent4'), 'no overlap');
