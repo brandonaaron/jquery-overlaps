@@ -16,12 +16,27 @@
 		#adjacent4 { top: 700px; left: 100px; }
 	</style>
 	<script type="text/javascript" src="qunit/qunit.js"></script>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.js"></script>
+	<script>
+		(function(){
+			var verMatch = /v=([\w\.]+)/.exec( location.search ),
+			version = verMatch && verMatch[1], src;
+			if ( version ) {
+				src = 'code.jquery.com/jquery-' + version;
+			}
+			document.write( '<script src="http://' + src + '.js"><\/script>' );
+			window.version = version;
+		})();
+	</script>
+	<script>
+		$(function() {
+			$('#version').html(window.version)
+		});
+	</script>
 	<script src="../jquery.overlaps.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript" src="test.js"></script>
 </head>
 <body>
-	<h1 id="qunit-header">overlaps Test Suite</h1>
+	<h1 id="qunit-header">overlaps Test Suite w/jQuery <span id="version"></span></h1>
 	<h2 id="qunit-banner"></h2>
 	<div id="qunit-testrunner-toolbar"></div>
 	<h2 id="qunit-userAgent"></h2>

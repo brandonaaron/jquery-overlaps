@@ -12,24 +12,17 @@ test(".overlaps()", 2, function() {
 });
 
 test(".overlaps(selector)", 4, function() {
-    ok($('#one').overlaps('#two'), '#one overlaps with #two');
-    ok($('#one').overlaps('#four'), '#one overlaps with #four');
-    ok(!$('#one').overlaps('#three'), '#one does not overlap with #three');
-    ok(!$('#two').overlaps('#four'), '#two does not overlap with #four');
-});
-
-test(":overlaps/:overlapping", 4, function() {
-    ok($('#one, #two').is(':overlapping'), '#one overlaps with #two');
-    ok($('#one, #four').is(':overlaps'), '#one overlaps with #four');
-    ok(!$('#one, #three').is(':overlapping'), '#one does not overlap with #three');
-    ok(!$('#two, #four').is(':overlaps'), '#two does not overlap with #four');
+    ok($('#one').overlaps('#two').length, '#one overlaps with #two');
+    ok($('#one').overlaps('#four').length, '#one overlaps with #four');
+    ok(!$('#one').overlaps('#three').length, '#one does not overlap with #three');
+    ok(!$('#two').overlaps('#four').length, '#two does not overlap with #four');
 });
 
 test(".overlaps(selector)/adjacent", 6, function() {
-    ok(!$('#adjacent1').overlaps('#adjacent2'), 'no overlap');
-    ok(!$('#adjacent1').overlaps('#adjacent3'), 'no overlap');
-    ok(!$('#adjacent1').overlaps('#adjacent4'), 'no overlap');
-    ok(!$('#adjacent2').overlaps('#adjacent3'), 'no overlap');
-    ok(!$('#adjacent2').overlaps('#adjacent4'), 'no overlap');
-    ok(!$('#adjacent3').overlaps('#adjacent4'), 'no overlap');
+    ok(!$('#adjacent1').overlaps('#adjacent2').length, 'no overlap');
+    ok(!$('#adjacent1').overlaps('#adjacent3').length, 'no overlap');
+    ok(!$('#adjacent1').overlaps('#adjacent4').length, 'no overlap');
+    ok(!$('#adjacent2').overlaps('#adjacent3').length, 'no overlap');
+    ok(!$('#adjacent2').overlaps('#adjacent4').length, 'no overlap');
+    ok(!$('#adjacent3').overlaps('#adjacent4').length, 'no overlap');
 });
