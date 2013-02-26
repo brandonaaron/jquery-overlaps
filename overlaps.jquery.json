@@ -1,5 +1,5 @@
 {
-    "name": "overlaps",
+    "name": "jquery-overlaps",
     "title": "jQuery Overlaps",
     "description": "A jQuery plugin that detects if one or more elements are overlapping.",
     "keywords": [
@@ -8,7 +8,7 @@
         "filter",
         "overlapping"
     ],
-    "version": "1.2.0",
+    "version": "1.2.1",
     "author": {
         "name": "Brandon Aaron",
         "url": "http://brandonaaron.net"
