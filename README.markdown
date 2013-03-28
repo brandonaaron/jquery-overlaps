@@ -11,6 +11,7 @@ The overlaps method exposes two modes of operation. First mode is to filter the 
     $('#div1').overlaps('#div2');
 
 
+
 ## License
 
 The overlaps plugin is licensed under the MIT License (LICENSE.txt).

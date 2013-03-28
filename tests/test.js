@@ -11,11 +11,12 @@ test(".overlaps()", 2, function() {
     ok(!results.is('#three'), 'should not have #three in the results');
 });
 
-test(".overlaps(selector)", 4, function() {
+test(".overlaps(selector)", 5, function() {
     ok($('#one').overlaps('#two').length, '#one overlaps with #two');
     ok($('#one').overlaps('#four').length, '#one overlaps with #four');
     ok(!$('#one').overlaps('#three').length, '#one does not overlap with #three');
     ok(!$('#two').overlaps('#four').length, '#two does not overlap with #four');
+    ok($('#one, #three').overlaps('#two').is('#one'), '#one overlaps with #two, verify element is returned');
 });
 
 test(".overlaps(selector)/adjacent", 6, function() {

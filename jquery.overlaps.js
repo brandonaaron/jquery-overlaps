@@ -1,7 +1,7 @@
 /*! Copyright (c) 2010 Brandon Aaron (http://brandonaaron.net)
  * Licensed under the MIT License (LICENSE.txt).
  *
- * Version 1.2.2
+ * Version 1.2.3
  */
 
 (function (factory) {
@@ -33,9 +33,10 @@
             for (index2 = 0; index2 < length2; index2++) {
                 if (collection1[index1] === collection2[index2]) {
                     continue;
-                }
-                if (checkOverlap(dims1[index1], dims2[index2])) {
-                    stack.push(collection1[index2]);
+                } else if (checkOverlap(dims1[index1], dims2[index2])) {
+                    stack.push( (length1 > length2) ?
+                        collection1[index1] :
+                        collection2[index2]);
                 }
             }
         }
