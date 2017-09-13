@@ -51,7 +51,7 @@
             offset = elem.getBoundingClientRect();
             dims.push([
                 offset.top + document.body.scrollTop,
-                offset.left + document.body.scrollTLeft,
+                offset.left + document.body.scrollLeft,
                 elem.offsetWidth,
                 elem.offsetHeight
             ]);
