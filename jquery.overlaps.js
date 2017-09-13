@@ -48,10 +48,10 @@
         var dims = [], i = 0, offset, elem;
 
         while ((elem = elems[i++])) {
-            offset = $(elem).offset();
+            offset = elem.getBoundingClientRect();
             dims.push([
-                offset.top,
-                offset.left,
+                offset.top + document.body.scrollTop,
+                offset.left + document.body.scrollLeft,
                 elem.offsetWidth,
                 elem.offsetHeight
             ]);
